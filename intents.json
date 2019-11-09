@@ -7,7 +7,10 @@
                 "How are you",
                 "Is anyone there?",
                 "Hello",
-                "Good day"
+                "Good day",
+                "greetings",
+                "yo",
+                "hey"
             ],
             "responses": [
                 "Hello, thanks for visiting",
@@ -34,7 +37,12 @@
             "patterns": [
                 "Thanks",
                 "Thank you",
-                "That's helpful"
+                "That's helpful",
+                "awesome",
+                "nice",
+                "appreciate it",
+                "good call",
+                "gracias"
             ],
             "responses": [
                 "Happy to help!",
