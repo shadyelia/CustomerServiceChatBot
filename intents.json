@@ -86,7 +86,17 @@
             "patterns": [
                 "Bye",
                 "See you later",
-                "Goodbye"
+                "Goodbye",
+                "cu",
+                "good by",
+                "cee you later",
+                "good night",
+                "good afternoon",
+                "goodbye",
+                "have a nice day",
+                "see you around",
+                "bye bye",
+                "see you later"
             ],
             "responses": [
                 "See you later, thanks for visiting",

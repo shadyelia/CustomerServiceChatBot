@@ -1,3 +1,4 @@
+import re
 import json
 import random
 import tensorflow
@@ -7,6 +8,10 @@ import nltk
 from nltk.stem.lancaster import LancasterStemmer
 import pickle
 stemmer = LancasterStemmer()
+
+
+def del_Punctutation(s):
+    return re.sub(r"[\.\t\,\:;\(\)\_\.!\@\?\&\--]", "", s, 0, 0)
 
 
 def trainOrLoadModel():
@@ -32,7 +37,9 @@ def trainOrLoadModel():
             if intent["tag"] not in labels:
                 labels.append(intent["tag"])
 
-        words = [stemmer.stem(w.lower()) for w in words if w != "?"]
+        words = [stemmer.stem(del_Punctutation(w.lower()))
+                 for w in words]
+        words = list(filter(None, words))
         words = sorted(list(set(words)))
 
         labels = sorted(labels)
@@ -45,8 +52,8 @@ def trainOrLoadModel():
         for x, doc in enumerate(docs_x):
             bag = []
 
-            wrds = [stemmer.stem(w.lower()) for w in doc]
-
+            wrds = [stemmer.stem(del_Punctutation(w.lower())) for w in doc]
+            wrds = list(filter(None, wrds))
             for w in words:
                 if w in wrds:
                     bag.append(1)
