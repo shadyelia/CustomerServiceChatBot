@@ -1,3 +1,4 @@
+import os.path
 import re
 import json
 import random
@@ -12,6 +13,35 @@ stemmer = LancasterStemmer()
 
 def del_Punctutation(s):
     return re.sub(r"[\.\t\,\:;\(\)\_\.!\@\?\&\--]", "", s, 0, 0)
+
+
+def reformWords(text):
+    '''Clean text by removing unnecessary characters and altering the format of words.'''
+
+    text = text.lower()
+
+    text = re.sub(r"i'm", "i am", text)
+    text = re.sub(r"he's", "he is", text)
+    text = re.sub(r"she's", "she is", text)
+    text = re.sub(r"it's", "it is", text)
+    text = re.sub(r"that's", "that is", text)
+    text = re.sub(r"what's", "that is", text)
+    text = re.sub(r"where's", "where is", text)
+    text = re.sub(r"how's", "how is", text)
+    text = re.sub(r"\'ll", " will", text)
+    text = re.sub(r"\'ve", " have", text)
+    text = re.sub(r"\'re", " are", text)
+    text = re.sub(r"\'d", " would", text)
+    text = re.sub(r"\'re", " are", text)
+    text = re.sub(r"won't", "will not", text)
+    text = re.sub(r"can't", "cannot", text)
+    text = re.sub(r"n't", " not", text)
+    text = re.sub(r"n'", "ng", text)
+    text = re.sub(r"'bout", "about", text)
+    text = re.sub(r"'til", "until", text)
+    text = re.sub(r"[-()\"#/@;:<>{}`+=~|.!?,]", "", text)
+
+    return text
 
 
 def trainOrLoadModel():
@@ -30,6 +60,7 @@ def trainOrLoadModel():
         for intent in data["intents"]:
             for pattern in intent["patterns"]:
                 wrds = nltk.word_tokenize(pattern)
+                wrds = [reformWords(w) for w in wrds]
                 words.extend(wrds)
                 docs_x.append(wrds)
                 docs_y.append(intent["tag"])
@@ -52,7 +83,7 @@ def trainOrLoadModel():
         for x, doc in enumerate(docs_x):
             bag = []
 
-            wrds = [stemmer.stem(del_Punctutation(w.lower())) for w in doc]
+            wrds = [stemmer.stem(del_Punctutation(w)) for w in doc]
             wrds = list(filter(None, wrds))
             for w in words:
                 if w in wrds:
@@ -82,14 +113,15 @@ def trainOrLoadModel():
 
     model = tflearn.DNN(net)
 
-    try:
+    IsModelExist = os.path.isfile('model.tflearn.index')
+    if IsModelExist:
         model.load("model.tflearn")
-        return model, words, labels, data
-    except:
+    else:
         model.fit(training, output, n_epoch=1000,
                   batch_size=8, show_metric=True)
         model.save("model.tflearn")
-        return model, words, labels, data
+
+    return model, words, labels, data
 
 
 def bag_of_words(s, words):
