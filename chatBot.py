@@ -108,7 +108,7 @@ def trainOrLoadModel():
     net = tflearn.input_data(shape=[None, len(training[0])])
     net = tflearn.fully_connected(net, 8)
     net = tflearn.fully_connected(net, 8)
-    net = tflearn.fully_connected(net, len(output[0]), activation="softmax")
+    net = tflearn.fully_connected(net, len(output[0]), activation="sigmoid")
     net = tflearn.regression(net)
 
     model = tflearn.DNN(net)

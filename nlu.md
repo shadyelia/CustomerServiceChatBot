@@ -1,0 +1,244 @@
+## intent:affirm
+- yes
+- indeed
+- of course
+- that sounds good
+- correct
+
+## intent:ask_about_cluster_enabler
+- what is [Cluster Enabler](product) ?
+- can you tell me more about [Cluster Enabler](product) ?
+- [Cluster Enabler](product)
+
+## intent:ask_howdoing
+- Ahoy matey how are you?
+- are you alright
+- are you having a good day
+- Are you ok?
+- are you okay
+- Do you feel good?
+- how are things going
+- how are things with you?
+- How are things?
+- how are you
+- how are you doing
+- how are you doing this morning
+- how are you feeling
+- how are you today
+- How are you?
+- how do you do?
+- how have you been
+- how is it going
+- how is your day
+- how is your day going
+- how is your evening
+- How was your day?
+- How's it going
+- How's it hanging?
+- how's life
+- how's life been treating you?
+- How's life treating you friend?
+- how's your day going
+- How've you been?
+- I'm fine and you
+- is everything all right
+- Is everything ok?
+- is everything okay
+- what about your day
+- What's going on?
+- what's good
+- What's new?
+- What's up man
+- What's up
+- how are you?
+- Do you have a great day?
+- how are you doing today my sweet friend
+- how are you doing?
+- how are u
+- How are you?
+
+## intent:bot_challenge
+- are you a bot?
+- are you a human?
+- am I talking to a bot?
+- am I talking to a human?
+
+## intent:deny
+- no
+- never
+- I don't think so
+- don't like that
+- no way
+- not really
+
+## intent:goodbye
+- bye
+- seeya
+- see ya
+- goodbye
+- see you later
+- see you around
+- Bye
+- See you later
+- Goodbye
+- cu
+- good by
+- cee you later
+- good night
+- good afternoon
+- goodbye
+- have a nice day
+- see you around
+- bye bye
+- see you later
+
+## intent:greet
+- hey
+- hello
+- hi
+- good morning
+- good evening
+- good afternoon
+- hey there
+- Hi
+- How are you
+- Is anyone there?
+- greetings
+- yo
+- hey
+- So, how are you doing today?
+- Hi there.
+- Hello.
+- How do you do.
+- Good afternoon.
+- Good day.
+- Yo
+- Aloha.
+- It's good to see you.
+- It's so nice to hear from you.
+- Yo!
+- Sup
+- Hey!
+- Howdy, partner.
+- Hey, you!
+- Greetings, earthling!
+- Hiya
+- Hey man
+- Say Whaaaaaat
+- Hey mister
+- Hullo
+- Yeehaw
+- Winks
+- Little wave
+- Smile
+- fist bump
+- High five!
+- A'ight
+- Hey buddy
+- Brother
+- Put it there, pardner
+- Heeyyyyyyyyyy
+- Cheers
+- Howdy
+- Suuuuuuuuuuppp
+- Watchadoing
+- How you doin
+- Good morning Mr. Smith.
+- Hello Ms. Anderson. How are you today?
+- It's great to see you!
+- It's nice to meet you.
+- Dear Reader
+- Dear Friend
+- It's good to see you, old boy
+- Ladies and Gentlemen
+- You look the same as ever, my girl
+- Welcome!
+- Bonjour!
+- Namaste
+- Oh hello, I didn't see you there before!
+- Why hello
+- Oi
+- Yoohoo
+- It's a beautiful day.
+- G'day
+- Rise and shine!
+- What a lovely morning!
+- What wonderful weather we're having.
+- How's my favorite little girl?
+- Hello, people of the new world.
+- Hey, sonny.
+- Morning, sweetie
+- Afternoon, boss.
+- Evening, General.
+
+## intent:mood_great
+- perfect
+- very good
+- great
+- amazing
+- wonderful
+- I am feeling very good
+- I am great
+- I'm good
+- I am fine
+
+## intent:mood_unhappy
+- sad
+- very sad
+- unhappy
+- bad
+- very bad
+- awful
+- terrible
+- not very good
+- extremely sad
+- so sad
+
+## intent:thank_you
+- thanks!
+- thank you
+- thx
+- thanks very much
+- Appreciate it
+- Thank you very much
+- I appreciate it
+- Thanks a lot
+- Thank you so much
+- Thanks for the help
+- Thank you for the help
+- I appreciate your help
+- Many thanks
+- You have my gratitude
+- Thanks for everything
+- Thanks a ton
+- I thank you
+- I'm thankful
+- Accept my gratitude
+- I can't thank you enough
+- How can I show you how grateful I am?
+- Thank you for helping me
+- Please accept my deepest thank
+- I cannot express my appreciation
+- I humbly thank you
+- I'll forever be grateful
+- thnx
+- thnx!
+- thank u
+- thanx
+- thanks!
+- All I can say is thanks!
+- thnx for your time
+- thnx for answering my questions
+- thnx for the help
+- thnx a lot
+- thnx
+- thanks
+- Thanks
+- Thank you
+- That's helpful
+- awesome
+- nice
+- appreciate it
+- good call
+- gracias
+- oh thanks
