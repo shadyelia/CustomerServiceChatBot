@@ -3,14 +3,21 @@ from flask import request
 from flask import Flask
 app = Flask(__name__)
 
-chatServers = ChatServers()
+chatServers = None
+
+
+def createChatServer():
+    global chatServers
+    chatServers = ChatServers()
 
 
 @app.route('/', methods=['Post'])
 def chat():
     input = request.data
-    return chatServers.Chat(input)
+    print(input)
+    return chatServers.Chat(str(input))
 
 
 if __name__ == "__main__":
+    createChatServer()
     app.run()
